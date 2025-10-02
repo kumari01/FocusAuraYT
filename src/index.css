@@ -252,3 +252,62 @@
     height: 100% !important;
   }
 }
+
+/* Mobile-specific improvements - More aggressive sizing */
+@media (max-width: 768px) {
+  /* Force smaller fonts on all mobile elements */
+  .mobile-compact {
+    font-size: 0.65rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .mobile-icon {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+  }
+
+  .mobile-text-xs {
+    font-size: 0.65rem !important;
+  }
+
+  .mobile-btn {
+    padding: 0.2rem 0.4rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  /* Override any existing mobile text sizes */
+  .text-xs, .text-sm, .text-base {
+    font-size: 0.65rem !important;
+  }
+
+  /* Smaller spacing */
+  .gap-1, .gap-2 {
+    gap: 0.15rem !important;
+  }
+
+  .mb-3, .mb-4, .mb-6 {
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Compact header */
+  .pt-16 {
+    padding-top: 3rem !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .mobile-text-xs {
+    font-size: 0.6rem !important;
+  }
+
+  .mobile-btn {
+    padding: 0.15rem 0.3rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .mobile-icon {
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+  }
+}
