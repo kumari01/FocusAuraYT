@@ -318,41 +318,41 @@ Tip: Press Enter to create new lines for better organization.
             <div className="fixed inset-0 bg-background/60 z-50 lg:hidden" onClick={handleSidebarClose} />
           )}
 
-          <div className={`fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-card border-l border-border z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
+          <div className={`fixed top-0 right-0 h-full w-80 max-w-[95vw] landscape:max-w-[60vw] landscape:w-96 bg-card border-l border-border z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
             isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
           }`}>
             <div className="flex flex-col h-full">
               {/* Sidebar Header */}
-              <div className="flex items-center justify-between p-4 border-b border-border">
+              <div className="flex items-center justify-between p-3 md:p-4 border-b border-border">
                 <div className="flex items-center gap-2">
-                  <NotebookPen className="h-5 w-5 text-primary" />
-                  <h2 className="text-lg font-semibold text-foreground">Study Notes</h2>
+                  <NotebookPen className="h-4 w-4 md:h-5 md:w-5 text-primary" />
+                  <h2 className="text-sm md:text-lg font-semibold text-foreground">Study Notes</h2>
                 </div>
                 <button
                   onClick={handleSidebarClose}
-                  className="p-2 rounded-lg bg-secondary hover:bg-accent transition-all duration-300"
+                  className="p-1.5 md:p-2 rounded-lg bg-secondary hover:bg-accent transition-all duration-300"
                   aria-label="Close notes"
                 >
-                  <X className="h-5 w-5 text-foreground" />
+                  <X className="h-4 w-4 md:h-5 md:w-5 text-foreground" />
                 </button>
               </div>
 
               {/* Action Buttons */}
-              <div className="p-4 border-b border-border">
-                <div className="flex items-center gap-2 mb-3">
+              <div className="p-2 md:p-4 border-b border-border">
+                <div className="flex items-center gap-1 md:gap-2 mb-2 md:mb-3">
                   <button
                     onClick={saveNotes}
-                    className="flex-1 flex items-center justify-center gap-2 p-2 text-primary hover:text-primary-hover bg-primary/10 hover:bg-primary/20 rounded-lg transition-all duration-300"
+                    className="flex-1 flex items-center justify-center gap-1 md:gap-2 p-1.5 md:p-2 text-primary hover:text-primary-hover bg-primary/10 hover:bg-primary/20 rounded-lg transition-all duration-300"
                   >
-                    <Save className="h-4 w-4" />
-                    <span className="text-sm font-medium">Save</span>
+                    <Save className="h-3 w-3 md:h-4 md:w-4" />
+                    <span className="text-xs md:text-sm font-medium">Save</span>
                   </button>
                   <button
                     onClick={exportNotes}
-                    className="flex-1 flex items-center justify-center gap-2 p-2 text-green-600 hover:text-green-700 bg-green-50 hover:bg-green-100 rounded-lg transition-all duration-300"
+                    className="flex-1 flex items-center justify-center gap-1 md:gap-2 p-1.5 md:p-2 text-green-600 hover:text-green-700 bg-green-50 hover:bg-green-100 rounded-lg transition-all duration-300"
                   >
-                    <Download className="h-4 w-4" />
-                    <span className="text-sm font-medium">Export</span>
+                    <Download className="h-3 w-3 md:h-4 md:w-4" />
+                    <span className="text-xs md:text-sm font-medium">Export</span>
                   </button>
                   <button
                     onClick={() => {
@@ -363,22 +363,22 @@ Tip: Press Enter to create new lines for better organization.
                         clearNotes();
                       }
                     }}
-                    className="p-2 text-red-500 hover:text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-all duration-300"
+                    className="p-1.5 md:p-2 text-red-500 hover:text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-all duration-300"
                     title="Clear Notes"
                   >
-                    <Trash2 className="h-4 w-4" />
+                    <Trash2 className="h-3 w-3 md:h-4 md:w-4" />
                   </button>
                 </div>
 
                 {/* Notes Stats */}
-                <div className="flex justify-between text-xs text-muted-foreground">
-                  <span>{notes.length} characters</span>
-                  <span>{notes.split('\n').filter(line => line.trim()).length} lines</span>
+                <div className="flex justify-between text-xs text-muted-foreground px-1">
+                  <span className="text-xs">{notes.length} chars</span>
+                  <span className="text-xs">{notes.split('\n').filter(line => line.trim()).length} lines</span>
                 </div>
               </div>
 
               {/* Notes Textarea */}
-              <div className="flex-1 p-4 overflow-hidden">
+              <div className="flex-1 p-2 md:p-4 overflow-hidden">
                 <textarea
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
@@ -389,14 +389,14 @@ Tip: Press Enter to create new lines for better organization.
 • Add questions or thoughts
 
 Your notes auto-save and can be exported!"
-                  className="w-full h-full p-3 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground resize-none focus:outline-none focus:ring-2 focus:ring-primary text-sm leading-relaxed"
+                  className="w-full h-full p-2 md:p-3 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground resize-none focus:outline-none focus:ring-2 focus:ring-primary text-xs md:text-sm leading-relaxed landscape:text-sm"
                 />
               </div>
 
               {/* Study Tips - Mobile */}
-              <div className="p-4 border-t border-border">
-                <h3 className="font-semibold text-foreground mb-2 text-sm">💡 Quick Tips</h3>
-                <ul className="text-xs text-muted-foreground space-y-1">
+              <div className="p-2 md:p-4 border-t border-border landscape:hidden">
+                <h3 className="font-semibold text-foreground mb-1 md:mb-2 text-xs md:text-sm">💡 Quick Tips</h3>
+                <ul className="text-xs text-muted-foreground space-y-0.5 md:space-y-1">
                   <li>• Swipe to close this panel</li>
                   <li>• Notes auto-save as you type</li>
                   <li>• Export anytime as markdown</li>
