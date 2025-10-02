@@ -79,7 +79,7 @@ const HeroSection = ({ onVideoSubmit }) => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 hero-landscape">
-      <div className="max-w-4xl mx-auto text-center hero-content">
+      <div className="max-w-4xl mx-auto text-center hero-content mt-8 md:mt-0">
         {/* Hero Heading */}
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight px-2">

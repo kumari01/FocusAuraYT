@@ -253,9 +253,9 @@
   }
 }
 
-/* Mobile-specific improvements - More aggressive sizing */
-@media (max-width: 768px) {
-  /* Force smaller fonts on all mobile elements */
+/* Mobile-specific improvements - Portrait mode only */
+@media (max-width: 768px) and (orientation: portrait) {
+  /* Force smaller fonts on mobile portrait elements only */
   .mobile-compact {
     font-size: 0.65rem !important;
     padding: 0.25rem 0.5rem !important;
@@ -275,7 +275,7 @@
     font-size: 0.65rem !important;
   }
 
-  /* Override any existing mobile text sizes */
+  /* Override any existing mobile text sizes - portrait only */
   .text-xs, .text-sm, .text-base {
     font-size: 0.65rem !important;
   }
@@ -293,10 +293,13 @@
   .pt-16 {
     padding-top: 3rem !important;
   }
-}
 
-/* Extra small screens */
-@media (max-width: 480px) {
+  /* Push hero content down on mobile */
+  .hero-landscape {
+    padding-top: 5rem !important;
+  }
+}/* Extra small screens - Portrait mode only */
+@media (max-width: 480px) and (orientation: portrait) {
   .mobile-text-xs {
     font-size: 0.6rem !important;
   }
@@ -309,5 +312,10 @@
   .mobile-icon {
     width: 0.7rem !important;
     height: 0.7rem !important;
+  }
+
+  /* Extra padding for very small screens */
+  .hero-landscape {
+    padding-top: 6rem !important;
   }
 }
