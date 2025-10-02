@@ -1,5 +1,5 @@
-import Index from "./pages/index";
-import { Toaster } from "@/components/Ui/Toaster";
+import Index from "./pages/index.jsx";
+import { Toaster } from "@/components/Ui/Toaster.jsx";
 
 const App = () => (
   <div>

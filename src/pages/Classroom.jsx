@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar.jsx";
+import Footer from "@/components/Footer.jsx";
 import { ArrowLeft, BookOpen, Clock, NotebookPen, Download, Trash2, Save, Menu, X, ChevronRight } from "lucide-react";
 import { useToast } from "@/Hooks/use-toast";
 

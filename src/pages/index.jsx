@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import VideoPlayer from "@/components/VideoPlayer";
-import Footer from "@/components/Footer";
-import Classroom from "./Classroom";
+import Navbar from "@/components/Navbar.jsx";
+import HeroSection from "@/components/HeroSection.jsx";
+import VideoPlayer from "@/components/VideoPlayer.jsx";
+import Footer from "@/components/Footer.jsx";
+import Classroom from "./Classroom.jsx";
 
 const Index = () => {
   const [currentVideoId, setCurrentVideoId] = useState(null);
