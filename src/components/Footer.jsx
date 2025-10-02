@@ -5,11 +5,11 @@ const Footer = () => {
         <div className="text-center">
           <div className="mb-3 sm:mb-4">
             <h3 className="text-base sm:text-lg font-semibold text-primary">
-              FocusAura<span className="text-foreground">yt</span>
+              FocusAura<span className="text-foreground">YT</span>
             </h3>
           </div>
           <p className="text-sm sm:text-base text-muted-foreground">
-            © 2025 FocusAurayt. All rights reserved.
+            © 2025 FocusAuraYT. All rights reserved.
           </p>
           <p className="text-xs sm:text-sm text-muted-foreground mt-2">
             Distraction-free YouTube viewing for better focus and productivity.

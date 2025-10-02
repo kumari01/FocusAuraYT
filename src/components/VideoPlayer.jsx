@@ -44,7 +44,7 @@ const VideoPlayer = ({ videoId, onClose }) => {
         {/* Video info */}
         <div className="mt-6 sm:mt-8 text-center px-4">
           <p className="text-sm sm:text-base text-muted-foreground">
-            Enjoying distraction-free viewing? Share FocusAurayt with others!
+            Enjoying distraction-free viewing? Share FocusAuraYT with others!
           </p>
         </div>
       </div>

@@ -69,7 +69,7 @@ const Navbar = ({ currentVideoId, onNavigateToClassroom, onNavigateHome, current
             {/* Logo */}
             <div className="flex-shrink-0">
               <h1 className="text-lg sm:text-2xl font-bold text-primary">
-                FocusAura<span className="text-foreground">yt</span>
+                FocusAura<span className="text-foreground">YT</span>
               </h1>
             </div>
 
